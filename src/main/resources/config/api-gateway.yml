@@ -1,6 +1,7 @@
 server:
   port: 9191
-
+  
+spring:
   cloud:
     gateway:
       routes:
