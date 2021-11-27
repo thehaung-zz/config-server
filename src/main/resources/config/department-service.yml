@@ -1,7 +1,7 @@
 server:
-   port: 9001
-   error:
-      include-stacktrace: "never"
+  port: 9001
+  error:
+    include-stacktrace: "never"
 
 eureka:
   client:
@@ -10,29 +10,29 @@ eureka:
     fetch-registry:
       value: true;
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://172.17.0.1:8761/eureka
     instance:
-      hostname: localhost
-      
+      hostname: 172.17.0.1
+
 springdoc:
   swagger-ui:
     path: /department/swagger-ui.html
   api-docs:
     path: /department/v3/api-docs/
-    
-spring: 
-   datasource:
-      driverClassName: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://172.17.0.1:3306/department_service
-      username: root
-      password: hhhvn@db2021
-   jpa:
-      show-sql: true
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.17.0.7:3306/department_service
+    username: hhhvn
+    password: hhhvn@db2021
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
       hibernate:
-         ddl-auto: update
-      properties:
-         hibernate:
-            dialect: org.hibernate.dialect.MySQL5Dialect
-   mvc:
-      pathmatch:
-         matching-strategy: ant_path_matcher
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
