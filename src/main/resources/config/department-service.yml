@@ -18,7 +18,7 @@ springdoc:
   swagger-ui:
     path: /department/swagger-ui.html
   api-docs:
-    path: /department/v3/api-docs/
+    path: /department/v3/api-docs
 
 spring:
   datasource:
